@@ -1,0 +1,16 @@
+<br>
+<h1>Nuestros Cines</h1><br>
+{{#each results }}
+<div class="contenido-cine">
+    <img src="img/cine/{{this.idCine}}.1.jpg" width="227" height="170">
+    <div class="datos-cine">
+        <h4>{{this.RazonSocial}}</h4><br>
+        <span>{{this.Direccion}} - Lima<br><br>Teléfono: {{this.Telefonos}}</span>
+    </div>
+    <br>
+    <a href="/cine/{{this.idCine}}">
+        <img src="img/varios/ico-info2.png" width="150" height="40">
+    </a>
+ 
+</div>
+{{/each}}
