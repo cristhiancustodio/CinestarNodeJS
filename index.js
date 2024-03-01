@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path');
 const {create} = require("express-handlebars");
 const app = express();
 
@@ -25,6 +26,8 @@ app.use("/cine", require("./routes/Cine"));
 */
 app.use(express.static(__dirname + "/views"));
 app.use(express.static(__dirname + "/views/img"));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get("/", (req,res) => {
     res.render("home");
 });
@@ -62,9 +65,6 @@ app.get("/cine/:id", (req, res) => {
             }
         }
     );
-    
-
-    
 });
 app.get("/pelicula", (req, res) => {
    res.render("pelicula");
