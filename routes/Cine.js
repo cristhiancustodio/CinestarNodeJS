@@ -1,9 +1,8 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
+const prueba = require("../controller/Prueba.js")
 
-router.get("/cine",(req, res)=>{
-    res.render("cine");
-})
-
+router.get("/",prueba.inicio);
+router.get("/inicio",prueba.inicio);
+router.get("/segundo",prueba.segundoInicio);
 
 module.exports = router;

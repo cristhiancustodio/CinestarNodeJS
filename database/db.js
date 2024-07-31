@@ -16,8 +16,20 @@ conexion.connect((err) => {
     }
     console.log("Conectado");
 })
+const queryAsync = (query) => {
+    return new Promise((resolve, reject) => {
+        conexion.query(query, (error, results) => {
+            if (error) {
+                return reject(error);
+            }
+            resolve(results);
+        });
+    });
+};
+module.exports = {
+    conexion, queryAsync, 
 
-module.exports = conexion;
+}
 
 
 
