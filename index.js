@@ -7,7 +7,7 @@ const cineController = require("./controller/CinesController.js");
 const peliculaController = require("./controller/PeliculaController.js");
 
 /**PARA RUTAS */
-const router = require("./routes/Cine.js");
+//const router = require("./routes/Cine.js");
 
 const hbs = create({
     extname: ".hbs",
